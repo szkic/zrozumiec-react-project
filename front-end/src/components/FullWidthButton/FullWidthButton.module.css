@@ -1,0 +1,10 @@
+.button {
+  border: none;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  background-color: var(--color-theme-main);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1rem;
+}
