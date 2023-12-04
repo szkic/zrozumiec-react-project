@@ -8,3 +8,7 @@
   font-weight: 700;
   font-size: 1rem;
 }
+
+.isBlack {
+  background-color: var(--color-text-default);
+}

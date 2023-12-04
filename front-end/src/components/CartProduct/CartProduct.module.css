@@ -1,0 +1,55 @@
+.favouriteProduct {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-text-grey);
+  gap: 3rem;
+}
+
+.favouriteProduct > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.favouriteProduct p span {
+  font-weight: 700;
+  color: var(--color-text-default);
+}
+
+.price {
+  color: var(--color-text-grey);
+  flex-grow: 1;
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.btnWrapper button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete::before {
+  content: url("../../assets/remove.svg");
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding-right: 0.5rem;
+}
+
+.rightPrice {
+  display: flex;
+  justify-content: flex-end;
+  color: var(--color-text-default);
+  flex-grow: 1;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
