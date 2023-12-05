@@ -5,7 +5,8 @@
   margin-bottom: 1rem;
   width: 100%;
 }
-.favouritesListContainer h3 {
+.favouritesListContainer h2 {
   font-weight: 700;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }

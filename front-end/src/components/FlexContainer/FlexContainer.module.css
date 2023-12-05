@@ -1,5 +1,14 @@
-.flexContainer {
+/* .flexContainer {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+} */
+
+.flexContainer {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  align-items: flex-start;
 }
