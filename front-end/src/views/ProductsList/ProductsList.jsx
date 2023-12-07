@@ -13,8 +13,6 @@ export function ProductsList() {
   const foundCategory = CATEGORIES.find((c) => c.path === params.category);
   let foundSubcategory;
 
-  console.log(foundCategory);
-
   if (params.subcategory) {
     foundSubcategory = foundCategory.subcategories.find(
       (sc) => sc.path === params.subcategory
