@@ -10,10 +10,7 @@ export function CurrencySelector() {
     <select
       value={currency}
       className={styles.selector}
-      onChange={(e) => {
-        setCurrency(e.currentTarget.value);
-        localStorage["selected-currency"] = e.currentTarget.value;
-      }}
+      onChange={(e) => setCurrency(e.currentTarget.value)}
     >
       <option value={CURRENCIES.PLN}>{CURRENCIES.PLN}</option>
       <option value={CURRENCIES.USD}>{CURRENCIES.USD}</option>
