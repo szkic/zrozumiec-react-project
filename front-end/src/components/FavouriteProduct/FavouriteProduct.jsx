@@ -1,8 +1,11 @@
 import { useFetcher } from "react-router-dom";
 import styles from "./FavouriteProduct.module.css";
 import { Price } from "../Price/Price";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
 
 export function FavouriteProduct({ favourite }) {
+  const [, addProductToCard] = useContext(CartContext);
   const { Form } = useFetcher();
   const product = favourite.product;
 
@@ -25,7 +28,12 @@ export function FavouriteProduct({ favourite }) {
           >
             <button className={styles.delete}>Usuń</button>
           </Form>
-          <button className={styles.add}>Dodaj do koszyka</button>
+          <button
+            onClick={() => addProductToCard(product)}
+            className={styles.add}
+          >
+            Dodaj do koszyka
+          </button>
         </div>
       </div>
       <p className={styles.rightPrice}>{price}</p>
