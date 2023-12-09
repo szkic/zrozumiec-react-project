@@ -1,9 +1,12 @@
 import { useFetcher } from "react-router-dom";
 import styles from "./FavouriteProduct.module.css";
+import { Price } from "../Price/Price";
 
 export function FavouriteProduct({ favourite }) {
   const { Form } = useFetcher();
   const product = favourite.product;
+
+  const price = <Price product={product} />;
 
   return (
     <div className={styles.favouriteProduct}>
@@ -13,7 +16,7 @@ export function FavouriteProduct({ favourite }) {
           {product.brand} {product.productName}
         </h3>
         <p className={styles.price}>
-          Cena: <span>{product.pricePLN} zł</span>
+          Cena: <span>{price}</span>
         </p>
         <div className={styles.btnWrapper}>
           <Form
@@ -25,7 +28,7 @@ export function FavouriteProduct({ favourite }) {
           <button className={styles.add}>Dodaj do koszyka</button>
         </div>
       </div>
-      <p className={styles.rightPrice}>{product.pricePLN} zł</p>
+      <p className={styles.rightPrice}>{price}</p>
     </div>
   );
 }
