@@ -8,8 +8,8 @@ export function FavouritesList({ products }) {
       <div className={styles.favouritesListContainer}>
         <h2>Ulubione</h2>
         <div>
-          {products.map((product) => (
-            <FavouriteProduct key={product.id} product={product} />
+          {products.map((favourite) => (
+            <FavouriteProduct key={favourite.id} favourite={favourite} />
           ))}
         </div>
       </div>
